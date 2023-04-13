@@ -1,14 +1,15 @@
-let arr =  [
-    {name: 'John',
-    surname: 'Black',
-    age: 23,}
-]
+let keyValue =   ['name', 'John', 'lastname', 'Black', 'age', '23']
 function printkeys (){
-   for(let i in arr){
-    console.log(arr[i])
-   }
+let obj = {}
+for(let i = 0; i < keyValue.length; i += 2){
+    const key = keyValue[i]
+    const value = keyValue[i + 1]
+    obj[key] = value
 }
-printkeys()
+return obj
+}
+const obj = printkeys()
+console.log(obj)
 
 function nums(...numbers){
     let sum = numbers.reduce((n1,n2)=>n1 += n2)
